@@ -54,17 +54,17 @@ const CategorySection = () => {
             </div>
 
             {/* Mobile View: Horizontal Scroll Circular Categories */}
-            <div className="md:hidden -mx-4 px-4 flex gap-4 overflow-x-auto no-scrollbar pb-2">
+            <div className="md:hidden -mx-4 px-6 flex gap-6 overflow-x-auto no-scrollbar py-4">
                 {categories.map((cat, idx) => (
                     <button
                         key={idx}
                         onClick={() => setActiveCategory(cat.name)}
-                        className={`flex flex-col items-center gap-2 min-w-[72px] transition-all ${activeCategory === cat.name ? 'scale-110' : 'opacity-80'}`}
+                        className={`flex flex-col items-center gap-3 min-w-[64px] transition-all relative ${activeCategory === cat.name ? 'scale-105' : 'opacity-80'}`}
                     >
-                        <div className={`w-14 h-14 rounded-full ${cat.color} flex items-center justify-center transition-transform active:scale-90 shadow-sm ${activeCategory === cat.name ? 'ring-2 ring-primary ring-offset-2' : ''}`}>
+                        <div className={`w-16 h-16 rounded-full ${cat.color} flex items-center justify-center transition-transform active:scale-90 shadow-sm ${activeCategory === cat.name ? 'ring-2 ring-primary ring-offset-4' : ''}`}>
                             <span className="material-symbols-outlined text-2xl">{cat.icon}</span>
                         </div>
-                        <span className={`text-[10px] font-bold text-center leading-tight ${activeCategory === cat.name ? 'text-primary' : 'text-slate-600'}`}>{cat.name}</span>
+                        <span className={`text-[11px] font-bold text-center leading-tight whitespace-nowrap ${activeCategory === cat.name ? 'text-primary' : 'text-slate-600'}`}>{cat.name}</span>
                     </button>
                 ))}
             </div>
