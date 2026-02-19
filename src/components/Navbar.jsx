@@ -1,6 +1,13 @@
-import React from 'react';
+import { useSite } from '../context/SiteContext';
 
 const Navbar = () => {
+    const {
+        cartCount,
+        setIsCartOpen,
+        searchQuery,
+        setSearchQuery,
+        location
+    } = useSite();
     return (
         <>
             {/* Utility Top Bar - Hidden on Mobile */}
@@ -44,7 +51,7 @@ const Navbar = () => {
                             <span className="material-symbols-outlined text-primary">location_on</span>
                             <div>
                                 <p className="text-[10px] text-slate-500 uppercase leading-none">Deliver to</p>
-                                <p className="text-sm font-semibold leading-tight">Lagos, NG</p>
+                                <p className="text-sm font-semibold leading-tight">{location}</p>
                             </div>
                             <span className="material-symbols-outlined text-sm">expand_more</span>
                         </button>
@@ -56,6 +63,8 @@ const Navbar = () => {
                                 className="w-full pl-10 pr-4 py-2.5 bg-slate-100 border-none rounded-xl focus:ring-2 focus:ring-primary text-sm outline-none transition-all"
                                 placeholder="Search for fresh tomatoes, yams, or food bundles..."
                                 type="text"
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
                             />
                         </div>
 
@@ -79,9 +88,14 @@ const Navbar = () => {
                             </div>
 
                             {/* Cart - Always Visible */}
-                            <button className="relative p-2 bg-slate-100 rounded-full hover:bg-primary/20 transition-colors group">
+                            <button
+                                onClick={() => setIsCartOpen(true)}
+                                className="relative p-2 bg-slate-100 rounded-full hover:bg-primary/20 transition-colors group cursor-pointer"
+                            >
                                 <span className="material-symbols-outlined group-hover:text-primary transition-colors">shopping_cart</span>
-                                <span className="absolute -top-1 -right-1 bg-primary text-[10px] font-bold text-white w-5 h-5 rounded-full flex items-center justify-center border-2 border-white">0</span>
+                                {cartCount > 0 && (
+                                    <span className="absolute -top-1 -right-1 bg-primary text-[10px] font-bold text-white w-5 h-5 rounded-full flex items-center justify-center border-2 border-white">{cartCount}</span>
+                                )}
                             </button>
                         </div>
                     </div>
@@ -94,6 +108,8 @@ const Navbar = () => {
                                 className="bg-transparent border-none focus:ring-0 w-full text-sm font-medium placeholder:text-slate-400 outline-none"
                                 placeholder="Search for fresh groceries..."
                                 type="text"
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
                             />
                             <button className="material-symbols-outlined text-slate-400">mic</button>
                         </label>

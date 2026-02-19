@@ -1,10 +1,11 @@
-import React from 'react';
+import { useSite } from '../context/SiteContext';
 
 const MobileTabs = () => {
+    const { cartCount, setIsCartOpen } = useSite();
     const tabs = [
         { icon: 'home', label: 'Home', active: true },
         { icon: 'grid_view', label: 'Shop', active: false },
-        { icon: 'shopping_cart', label: 'Cart', count: 0 },
+        { icon: 'shopping_cart', label: 'Cart', count: cartCount, onClick: () => setIsCartOpen(true) },
         { icon: 'receipt_long', label: 'Orders', active: false },
         { icon: 'person', label: 'Account', active: false },
     ];
@@ -13,7 +14,11 @@ const MobileTabs = () => {
         <nav className="fixed md:hidden bottom-0 left-0 right-0 bg-white/95 backdrop-blur-lg border-t border-slate-200 px-2 py-2 z-50">
             <div className="flex justify-around items-center">
                 {tabs.map((tab, idx) => (
-                    <button key={idx} className={`flex flex-col items-center gap-1 px-3 py-1 rounded-xl transition-all ${tab.active ? 'text-primary' : 'text-slate-500'}`}>
+                    <button
+                        key={idx}
+                        onClick={tab.onClick}
+                        className={`flex flex-col items-center gap-1 px-3 py-1 rounded-xl transition-all ${tab.active ? 'text-primary' : 'text-slate-500'}`}
+                    >
                         <div className="relative">
                             <span className="material-symbols-outlined text-2xl">
                                 {tab.icon}
