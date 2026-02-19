@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GSHAK Farms | Freshness from Our Farm to Your Table</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#49ec13",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#152210",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<!-- Utility Top Bar -->
+<div class="bg-primary/10 dark:bg-primary/5 py-2 px-6 border-b border-primary/20">
+<div class="max-w-7xl mx-auto flex justify-between items-center text-xs font-medium">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">call</span>
+<span>Support: +234 800 GSHAK FARMS</span>
+</div>
+<div class="hidden md:flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">mail</span>
+<span>hello@gshakfarms.com</span>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<a class="hover:text-primary transition-colors" href="#">Charity</a>
+<a class="hover:text-primary transition-colors" href="#">Blog</a>
+<a class="hover:text-primary transition-colors" href="#">About Us</a>
+<a class="hover:text-primary transition-colors" href="#">FAQs</a>
+</div>
+</div>
+</div>
+<!-- Main Header -->
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 md:px-6 py-4">
+<div class="flex items-center justify-between gap-8">
+<!-- Logo -->
+<div class="flex items-center gap-2 shrink-0">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">eco</span>
+</div>
+<h1 class="text-xl font-extrabold tracking-tight hidden lg:block">GSHAK <span class="text-primary">Farms</span></h1>
+</div>
+<!-- Location Selector -->
+<button class="hidden md:flex items-center gap-2 px-3 py-2 bg-slate-100 dark:bg-slate-800 rounded-lg hover:ring-1 ring-primary transition-all">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div class="text-left">
+<p class="text-[10px] text-slate-500 uppercase leading-none">Deliver to</p>
+<p class="text-sm font-semibold leading-tight">Lagos, NG</p>
+</div>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<!-- Search Bar -->
+<div class="flex-1 max-w-xl relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-10 pr-4 py-2.5 bg-slate-100 dark:bg-slate-800 border-none rounded-xl focus:ring-2 focus:ring-primary text-sm outline-none transition-all" placeholder="Search for fresh tomatoes, yams, or food bundles..." type="text"/>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-4 shrink-0">
+<div class="hidden xl:flex items-center gap-2">
+<button class="px-4 py-2 text-sm font-bold hover:text-primary transition-colors">Login</button>
+<button class="px-5 py-2 bg-primary text-white text-sm font-bold rounded-lg hover:shadow-lg hover:shadow-primary/30 transition-all">Register</button>
+</div>
+<button class="relative p-2 bg-slate-100 dark:bg-slate-800 rounded-full hover:bg-primary/20 transition-colors group">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-primary text-[10px] font-bold text-white w-5 h-5 rounded-full flex items-center justify-center border-2 border-white dark:border-background-dark">0</span>
+</button>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="mt-4 flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-4 overflow-x-auto no-scrollbar">
+<div class="flex items-center gap-8 whitespace-nowrap">
+<button class="flex items-center gap-2 text-sm font-bold text-primary">
+<span class="material-symbols-outlined">menu</span>
+                        Categories
+                    </button>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Shop Now</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Gift Cards</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Seasonal Specials</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Wholesale</a>
+</div>
+</nav>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 md:px-6 py-8 space-y-12">
+<!-- Hero Section -->
+<section class="relative h-[480px] rounded-3xl overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent z-10"></div>
+<img alt="Fresh Produce Hero" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Lush green organic vegetables arranged on a farm table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxj2NXFTPaP5gSikMLgbFoMsIrt6KVqy6ORkECHBdvhoteYkmXobWMzMkb4Q8qDYknPM_2XPEhtV2i-evK40bi-lBkVZDyCTnHcdoaFkRifmUcyzOyZ8DpBbH_kC4jsZdt53_8aJCILinU_oe9j0Dgt9DZbj2Xgf52WoxWddUPYESpOMbmRZed58qkB_pZSqpeTiZd6PrfxCOUOBEHGEHwhSDuUJxeYtv3NAWmOrQMWUIImKS1GfMUxhU6pyvmRKeVNL7zsHBznPd7"/>
+<div class="relative z-20 h-full flex flex-col justify-center px-12 max-w-2xl text-white">
+<span class="bg-primary/90 text-background-dark text-xs font-bold px-3 py-1 rounded-full w-fit mb-4">FARM DIRECT EXPERIENCE</span>
+<h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+                    Freshness from Our <span class="text-primary">Farm</span> to Your <span class="text-primary">Table</span>.
+                </h1>
+<p class="text-lg text-slate-200 mb-8 max-w-lg">
+                    Experience the finest organic produce delivered straight to your doorstep. Quality you can taste, farming you can trust.
+                </p>
+<div class="flex gap-4">
+<button class="px-8 py-4 bg-primary text-background-dark text-lg font-bold rounded-xl hover:scale-105 transition-transform flex items-center gap-2">
+                        Shop Now <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="px-8 py-4 bg-white/20 backdrop-blur-md text-white text-lg font-bold rounded-xl hover:bg-white/30 transition-colors">
+                        View Deals
+                    </button>
+</div>
+</div>
+</section>
+<!-- Category Section -->
+<section>
+<div class="flex items-center justify-between mb-8">
+<div>
+<h2 class="text-2xl font-extrabold">Shop by Category</h2>
+<p class="text-slate-500 text-sm">Find everything you need for your kitchen</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-1 hover:underline">
+                    View All <span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+<!-- Category Card -->
+<a class="group relative aspect-square rounded-2xl overflow-hidden bg-slate-200" href="#">
+<img alt="Fresh Produce" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Basket of fresh green leafy vegetables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW8QjxaEduerLcsMlCcZigMpQAb4yt25u93IVeRnhzjEO1dBQ9p_n0En_xwo0_pqSghewl2LPWFRpC0U3379sM8L0EYFmMbE0XY87UJy8bpLXAN65bqOozotNuiEnfJhPKnRSR69jYf-iAOV4FfHAB2g2PUZJ4bXgMk1x0_fsHcA2X2uHVm7YgiLU7Ujr82JDwNjhSQpBRswPSr-6O7cxw8qsZw-NwC4SHwtoP8gTpjmvsVik9-whPwemxe9-ac1CsAlcJ3ABGNjJK"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<p class="text-white font-bold text-lg">Fresh Produce</p>
+<p class="text-primary text-xs font-medium">120+ Items</p>
+</div>
+</a>
+<a class="group relative aspect-square rounded-2xl overflow-hidden bg-slate-200" href="#">
+<img alt="Tubers &amp; Grains" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Grains and tubers like yams and potatoes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiJ6jrmChzC8sc7qoUi4rh0bafYTXMcnsh22U3EwlLS0iX8_RQfnLqo368UvFfsnhzXGZgP1-xjdU-OJJxgbdrCOCbNUATKSKcUwWLMGgKWO_zI9dZGY7DSszV5SgjXbTiuw4Va84yBtPfwVk8PsMAg429YfaPMAfbWu3vReeQ3nPJZK_gRfG0x6WMt1AGAbXQ8EDXl1oCRGgPqubEc9Vp45ZGxHiYNrB_RM1f3nfLe8tyZGDOmz3vIwxUo4oOwZubjaSimIb7YtI7"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<p class="text-white font-bold text-lg">Tubers &amp; Grains</p>
+<p class="text-primary text-xs font-medium">85+ Items</p>
+</div>
+</a>
+<a class="group relative aspect-square rounded-2xl overflow-hidden bg-slate-200" href="#">
+<img alt="Fruits" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Assorted colorful tropical fruits" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtBY51FPDUnrzVpqSQ710oUTtvUsUGVSyKWirAxl-2OS8ZsLiTr_ydyRNCQanHc0RevwNvtL8rNBJwEJyuXAhM2SUTWrB50UAELBdcyTJAOmXi4c5hUOFDYPFgkazP5fpbJ2p05VfW1aT3lUohnChe4MdOEgCWWop8HruSfpPq5rr3z_W5bwmlZwRZ-Ib2DS_x3iybplD3bkk3q15_EMiT5TWTtIFruRHi93TRkW0R5AusKPJk9PND0ahjFzJ5Bs0K4j62kHQt1rk5"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<p class="text-white font-bold text-lg">Fruits</p>
+<p class="text-primary text-xs font-medium">40+ Items</p>
+</div>
+</a>
+<a class="group relative aspect-square rounded-2xl overflow-hidden bg-slate-200" href="#">
+<img alt="Protein" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Raw protein sources like chicken and meat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKTqTpQmEmhrxcgnfmnopZ0E5RQcAfB_eqO2M3-SNK_Et2bahompMT5Z1Y_cDkmNUMKNIXSl9dovJbA3vbfEpCLO4pQrnFYgn7bkF0eFwD2CZY6_3DHwHxEZPOd9nxtmrqKYgXR9K9nAuLfxgubU4Xk4igmaoH7tPQJSz-XfH-cr8Ru3Qg_JEeV55RmQNqd3_mguXK_NsOEjEWyGXUmWLUaQ9974wQzi-UMUJUvhhXe3tQTlV-V2mvJiGb3G_OLL-EtZCGjLm57cL-"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<p class="text-white font-bold text-lg">Protein</p>
+<p class="text-primary text-xs font-medium">60+ Items</p>
+</div>
+</a>
+<a class="group relative aspect-square rounded-2xl overflow-hidden bg-slate-200" href="#">
+<img alt="Food Bundles" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Various food items packed as a bundle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_glPVANAHVSa_vuH2nQRAg0n5L-WX2DAYYMyKugWP2diHMZ9X5YWRbPEdPgIZG23fJBHS8ZE4ivypC_uGz7zl-8DxEoJnTlxiaDdVaOduFOMzsou7-xqlkmSovGMExHzG6oCzSu9ttA_wuP4FcPqRgTCctFY_czBNsXKU39kkj5zjiAH9gfnd3yqZEI7K9tV4nufOTgdWeaue0LRvzFg2hBNRR2X-BitVtDn0WjDp7gJFo_lpe1qEUle-8W8FhvqJTmddCNwmw6SX"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<p class="text-white font-bold text-lg">Food Bundles</p>
+<p class="text-primary text-xs font-medium">Bulk Savings</p>
+</div>
+</a>
+</div>
+</section>
+<!-- Seasonal Favorites / Top Picks -->
+<section>
+<div class="flex items-center justify-between mb-8">
+<div>
+<h2 class="text-2xl font-extrabold">Today's Top Picks</h2>
+<p class="text-slate-500 text-sm">Harvested fresh this morning from our local farms</p>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Product Card 1 -->
+<div class="bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 rounded-2xl p-4 group hover:shadow-xl hover:shadow-primary/5 transition-all">
+<div class="relative aspect-square rounded-xl overflow-hidden mb-4 bg-slate-100">
+<span class="absolute top-2 left-2 z-10 bg-primary/20 text-primary text-[10px] font-bold px-2 py-1 rounded-md">ORGANIC</span>
+<img alt="Red Tomatoes" class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Fresh ripe red tomatoes on vine" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAumov1L-dlSpcFzP8nc_GOdg3PsdNk_QpeU7j6J_IooCO5m2iEm9bH8yNnzX0jBKBAgCR080e2c4iGpXZZF0Z0ghV1IvuhgRz6TeQWLg2Siq3lea2mpKTGyDr6paJl_E4U3x3p_4Js1rDy1gl39-keVvJ1u7hCHP-O7lo3BZu-ZhG6eKC2Jo7utFIAScWday-Dus038UfQzokJh99Ohv2QwtBbOIJlsY5E1Dxq1RwhVDt3gOMla18__4r6xcjlvcnv1eT3fudOInpa"/>
+</div>
+<div>
+<p class="text-xs text-slate-400 font-medium mb-1">Produce</p>
+<h3 class="font-bold text-slate-800 dark:text-slate-100 mb-2">Organic Vine Tomatoes</h3>
+<p class="text-sm text-slate-500 mb-4">1kg Basket</p>
+<div class="flex items-center justify-between mt-auto">
+<div>
+<span class="text-xs text-slate-400 line-through">₦2,500</span>
+<p class="text-lg font-bold text-primary">₦2,100</p>
+</div>
+<button class="p-2.5 bg-primary text-white rounded-lg hover:scale-110 transition-transform flex items-center justify-center">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 rounded-2xl p-4 group hover:shadow-xl hover:shadow-primary/5 transition-all">
+<div class="relative aspect-square rounded-xl overflow-hidden mb-4 bg-slate-100">
+<img alt="Yam Tubers" class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Large white yam tubers in a market" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIpLJn9nw0JnEvcAR_oY6PO8-oJDu_fafBeFtZaabl9_JV5TcbGvR6qFSa4t30K0k5fZ_kMXfzawcPGggH0Aqp_v0eH-4JWNk5yCWbxrzbA_wOtPW-rgs8ko6VZrYwKDtw4zTuI1uZq3xNcLnYkQw1PE9ZijPU4Q4MXHr-xDQa-bBLPIAurCQmyTqhglvqoCkuvPTqv57aULCK1LVj_IOkv_zlzkJx3V4huEJY0ggHsEnMQ9t2lBi8-uLTGLLIcwov283VvnkGycJO"/>
+</div>
+<div>
+<p class="text-xs text-slate-400 font-medium mb-1">Tubers</p>
+<h3 class="font-bold text-slate-800 dark:text-slate-100 mb-2">Premium Large Yam</h3>
+<p class="text-sm text-slate-500 mb-4">Per Tuber (Approx 3kg)</p>
+<div class="flex items-center justify-between mt-auto">
+<div>
+<p class="text-lg font-bold text-primary">₦4,500</p>
+</div>
+<button class="p-2.5 bg-primary text-white rounded-lg hover:scale-110 transition-transform flex items-center justify-center">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 rounded-2xl p-4 group hover:shadow-xl hover:shadow-primary/5 transition-all">
+<div class="relative aspect-square rounded-xl overflow-hidden mb-4 bg-slate-100">
+<img alt="Whole Chicken" class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Fresh raw whole farm-raised chicken" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFoCkVSy6gmfQSU5HRKFDfWuvNzTE48LfQgJfUtsDeLv9mXYc6wy81Swx3DDrLV7JGBMlhVhw1tm5QhLdJWWY01-OAlPQMjSBdLGXscdcaFO_k5bqIA7lddSJPeevhlqhHVwvibvW4v-W1H5wOAGzktmvfUKOVtBF35DiAiJjvJXswZ581VnX_tS_0zEs-oGSBuyhtRngbkS8xNw-b1h_2N0Ao1mm1jGEGBvkh5oJ2bCSgJuHEVK5XBDkUHOwUfrIg3sIYvj2aEZ_O"/>
+</div>
+<div>
+<p class="text-xs text-slate-400 font-medium mb-1">Protein</p>
+<h3 class="font-bold text-slate-800 dark:text-slate-100 mb-2">Farm Raised Whole Chicken</h3>
+<p class="text-sm text-slate-500 mb-4">Dressed &amp; Frozen (1.5kg+)</p>
+<div class="flex items-center justify-between mt-auto">
+<div>
+<p class="text-lg font-bold text-primary">₦8,200</p>
+</div>
+<button class="p-2.5 bg-primary text-white rounded-lg hover:scale-110 transition-transform flex items-center justify-center">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 rounded-2xl p-4 group hover:shadow-xl hover:shadow-primary/5 transition-all">
+<div class="relative aspect-square rounded-xl overflow-hidden mb-4 bg-slate-100">
+<span class="absolute top-2 left-2 z-10 bg-orange-500 text-white text-[10px] font-bold px-2 py-1 rounded-md">POPULAR</span>
+<img alt="Grocery Bundle" class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Carton filled with grocery essentials" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHKdWeQQbeoFrIxa3ZcCTkm9dhpbezF6W3PE-re6ad_jz79iTsrFEthY9RLJKw2iyQF1ilavfKSUnX34Xi0sNMuJuG02exGnxeS5CXvru_gFjHuDiFIjnHWF2qusacWkf1fZTMjGB-Ty_R0xz3RnwrVi7F6aD0I4EYzUMXaqOgJMKkm3yZlWjtpdyO10eh0P4vxs0dxzR6LIQ3eETSFHsOxNO6vPXPyLXnAhLQyLFvaMdrsPhqw-eUxaWgxOYF6LrKn1n8MDYVccFu"/>
+</div>
+<div>
+<p class="text-xs text-slate-400 font-medium mb-1">Bundles</p>
+<h3 class="font-bold text-slate-800 dark:text-slate-100 mb-2">Weekly Family Bundle</h3>
+<p class="text-sm text-slate-500 mb-4">Essential kitchen set</p>
+<div class="flex items-center justify-between mt-auto">
+<div>
+<p class="text-lg font-bold text-primary">₦32,000</p>
+</div>
+<button class="p-2.5 bg-primary text-white rounded-lg hover:scale-110 transition-transform flex items-center justify-center">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Propositions -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-8 bg-white dark:bg-background-dark p-8 rounded-3xl border border-slate-100 dark:border-slate-800">
+<div class="flex flex-col items-center text-center space-y-3">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">local_shipping</span>
+</div>
+<h4 class="font-bold text-lg">Express Delivery</h4>
+<p class="text-sm text-slate-500">Same day delivery for orders before 10 AM. Freshness guaranteed.</p>
+</div>
+<div class="flex flex-col items-center text-center space-y-3">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">verified_user</span>
+</div>
+<h4 class="font-bold text-lg">Farm Direct</h4>
+<p class="text-sm text-slate-500">Eliminating middlemen to give you the best prices and highest quality.</p>
+</div>
+<div class="flex flex-col items-center text-center space-y-3">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">volunteer_activism</span>
+</div>
+<h4 class="font-bold text-lg">Eco-Friendly</h4>
+<p class="text-sm text-slate-500">Sustainably grown and packaged to protect our beautiful planet.</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white border-t border-slate-200 pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-12 gap-12">
+<!-- Logo and Copyright for small screens, usually bottom, but matching layout -->
+<div class="col-span-2 md:col-span-2 space-y-4">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-lg">eco</span>
+</div>
+<span class="text-lg font-extrabold tracking-tight">GSHAK <span class="text-primary">Farms</span></span>
+</div>
+<p class="text-xs text-slate-400 mt-auto hidden md:block">© 2024 GSHAK Farms. All rights reserved.</p>
+</div>
+<!-- Categories Column -->
+<div class="col-span-1 md:col-span-2">
+<h5 class="text-slate-400 text-sm font-semibold mb-6 uppercase tracking-wider">Categories</h5>
+<ul class="space-y-3 text-sm font-medium text-slate-700">
+<li><a class="hover:text-primary transition-colors" href="#">Fresh Produce</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Tubers &amp; Grains</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Fruits</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Protein</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Food Bundles</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cooking Essentials</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Organic Foods</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Household</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Baking &amp; Dairy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Packaged Foods</a></li>
+</ul>
+</div>
+<!-- Company Column -->
+<div class="col-span-1 md:col-span-2">
+<h5 class="text-slate-400 text-sm font-semibold mb-6 uppercase tracking-wider">Company</h5>
+<ul class="space-y-3 text-sm font-medium text-slate-700">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">FAQ</a></li>
+</ul>
+</div>
+<!-- Policy Column -->
+<div class="col-span-1 md:col-span-2">
+<h5 class="text-slate-400 text-sm font-semibold mb-6 uppercase tracking-wider">Policy</h5>
+<ul class="space-y-3 text-sm font-medium text-slate-700">
+<li><a class="hover:text-primary transition-colors" href="#">Return Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms &amp; Conditions</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+<!-- Social Column -->
+<div class="col-span-1 md:col-span-2">
+<h5 class="text-slate-400 text-sm font-semibold mb-6 uppercase tracking-wider">Social</h5>
+<ul class="space-y-3 text-sm font-medium text-slate-700">
+<li><a class="hover:text-primary transition-colors" href="#">Facebook</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Instagram</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Twitter</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">YouTube</a></li>
+</ul>
+</div>
+<!-- Get the app Column -->
+<div class="col-span-2 md:col-span-2">
+<h5 class="text-slate-400 text-sm font-semibold mb-6 uppercase tracking-wider">Get the app</h5>
+<div class="space-y-3">
+<a class="block" href="#">
+<img alt="Download on App Store" class="h-10" src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"/>
+</a>
+<a class="block" href="#">
+<img alt="Get it on Google Play" class="h-10" src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"/>
+</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 mt-16 md:hidden text-center text-xs text-slate-400">
+        © 2024 GSHAK Farms. All rights reserved.
+    </div>
+</footer>
+</body></html>
