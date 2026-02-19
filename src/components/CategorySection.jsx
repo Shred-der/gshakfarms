@@ -4,7 +4,13 @@ const CategorySection = () => {
     const { activeCategory, setActiveCategory } = useSite();
 
     const categories = [
-        { name: 'All', icon: 'apps', color: 'bg-slate-100 text-slate-600' },
+        {
+            name: 'All',
+            icon: 'apps',
+            color: 'bg-slate-100 text-slate-600',
+            img: 'https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=800&auto=format&fit=crop',
+            items: '500+ Items'
+        },
         {
             name: 'Produce',
             items: '120+ Items',
