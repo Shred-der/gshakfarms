@@ -8,6 +8,7 @@ import MobileTabs from './components/MobileTabs';
 import MobileFAB from './components/MobileFAB';
 import BulkSavings from './components/BulkSavings';
 import CartSidebar from './components/CartSidebar';
+import Toast from './components/Toast';
 import { SiteProvider } from './context/SiteContext';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <div className="min-h-screen bg-white text-slate-900 font-display pb-16 md:pb-0">
                 <Navbar />
                 <CartSidebar />
+                <Toast />
 
                 <main className="max-w-7xl mx-auto px-4 md:px-6 py-8 space-y-12 md:space-y-16">
                     <Hero />

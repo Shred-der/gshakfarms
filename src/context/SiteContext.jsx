@@ -16,6 +16,12 @@ export const SiteProvider = ({ children }) => {
     const [searchQuery, setSearchQuery] = useState('');
     const [isCartOpen, setIsCartOpen] = useState(false);
     const [location, setLocation] = useState('Lekki, Lagos');
+    const [notification, setNotification] = useState({ show: false, message: '', productName: '' });
+
+    const showNotification = (message, productName = '') => {
+        setNotification({ show: true, message, productName });
+        setTimeout(() => setNotification({ show: false, message: '', productName: '' }), 3000);
+    };
 
     // Products Data
     const products = useMemo(() => [
@@ -81,10 +87,13 @@ export const SiteProvider = ({ children }) => {
             }
             return [...prev, { ...product, quantity: 1 }];
         });
+        showNotification('Added to cart', product.name);
     };
 
     const removeFromCart = (id) => {
+        const product = cart.find(item => item.id === id);
         setCart(prev => prev.filter(item => item.id !== id));
+        if (product) showNotification('Removed from cart', product.name);
     };
 
     const updateQuantity = (id, delta) => {
@@ -122,7 +131,8 @@ export const SiteProvider = ({ children }) => {
         location,
         setLocation,
         products,
-        filteredProducts
+        filteredProducts,
+        notification
     };
 
     return (
