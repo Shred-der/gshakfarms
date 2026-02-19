@@ -28,7 +28,7 @@ export const Footer = () => (
                     </div>
                     <span className="text-lg font-extrabold tracking-tight">GSHAK <span className="text-primary">Farms</span></span>
                 </div>
-                <p className="text-xs text-slate-400 mt-auto hidden md:block">© 2024 GSHAK Farms. All rights reserved.</p>
+                <p className="text-xs text-slate-400 mt-auto hidden md:block">© 2026 GSHAK Farms. All rights reserved.</p>
             </div>
 
             {[
@@ -60,7 +60,7 @@ export const Footer = () => (
             </div>
         </div>
         <div className="max-w-7xl mx-auto px-6 mt-16 md:hidden text-center text-xs text-slate-400">
-            © 2024 GSHAK Farms. All rights reserved.
+            © 2026 GSHAK Farms. All rights reserved.
         </div>
     </footer>
 );
